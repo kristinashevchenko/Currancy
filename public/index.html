@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Курсы валют</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h1>График курсов валют</h1>
+
+<div id="linechart_material"  class="line"></div>
+<div class="container">
+    <label>Валюта</label>
+    <div class="dropdown">
+        <button class="dropbtn">USD</button>
+        <div class="dropdown-content">
+            <a id="USD">USD</a>
+            <a id="EUR">EUR</a>
+            <a id="RUR">RUB</a>
+        </div>
+    </div>
+</div>
+<div class="container2">
+    <p class="period">Период времени</p>
+    <input type="date" name="calendar"> -
+    <input type="date" name="calendar">
+    <input type="submit" value="Применить" id="accept" class="accept">
+
+</div>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script src="module.js"></script>
+<script src="module1.js"></script>
+<script>
+    module1.start();
+</script>
+<script>
+    google.charts.load('current', {'packages': ['line']});
+  //  google.charts.setOnLoadCallback(module1.drawChart);
+</script>
+
+</body>
+<footer>Produced by Kristina Shevchenko, 2018</footer>
+</html>
